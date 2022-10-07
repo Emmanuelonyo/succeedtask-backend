@@ -24,8 +24,7 @@ const upload = multer({storage: storage})
 const type = upload.single('upl')
 
 app.post('/api/v1/submit', type, (req, res) => {    
-    console.log('Files: ', req.body);
-    console.log('Files: ', req.file);
+    res.send({status:"success", message: "Your Video has been submited successfuly"})
 })
 
 
